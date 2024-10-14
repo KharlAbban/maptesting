@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "prebuild": "git lfs install && git lfs pull",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
