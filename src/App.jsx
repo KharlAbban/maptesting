@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import { AdvancedInteractionsMap, AppLayout, BasicInteractionsMap, GeneralPurposeMap, LandingPage, MapboxLayersMap } from "./pages";
+import { AdvancedInteractionsMap, AppLayout, BasicInteractionsMap, GeneralPurposeMap, LandingPage, LayeredLayers, MapboxLayersMap } from "./pages";
 
 const mapRouter = createBrowserRouter([
   {
@@ -25,6 +25,10 @@ const mapRouter = createBrowserRouter([
       {
         path: "/mapbox-layers-map",
         element: <MapboxLayersMap />
+      },
+      {
+        path: "/mapbox-layered-layers-map",
+        element: <LayeredLayers />
       },
     ]
   },

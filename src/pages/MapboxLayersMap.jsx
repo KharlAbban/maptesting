@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { useMapboxGl } from "../contexts/GlobalMapContext";
 import { GH_GEOLOCATION } from "../utils/key_geocodes";
 import { FaHamburger } from "react-icons/fa";
-import { Form } from "react-router-dom";
+import { Form, Link } from "react-router-dom";
 import RegionsGeoData from '../geoData/gh-regions.json'
 import DistrictGeoData from "../geoData/District_272.json"
 
@@ -223,11 +223,6 @@ const MapboxLayersMap = () => {
     ],);
   };
 
-  const layerLayers = () => {
-    // Goal: Render 2 layers on top of each other
-    // Note: Make the districts layer semi-transparent so the regions layer that show through it
-  }
-
   return (
     <div className="mapContainerLayout">
       <div className="w-1/2 map-info-section">
@@ -280,7 +275,7 @@ const MapboxLayersMap = () => {
                 Here, we combine 2 layers, one on top of the other. The districts layer is put on top of the regions layer.
                 Click the button below to see it in action!
               </p>
-              <button onClick={layerLayers} className="bg-cyan-400 py-1 px-2 mt-1 ms-2 rounded hover:bg-cyan-500 duration-100 ease-linear">Layer layers!</button>
+              <Link to="/mapbox-layered-layers-map" className="bg-cyan-400 py-1 px-2 mt-1 inline-block ms-2 rounded hover:bg-cyan-500 duration-100 ease-linear">Layer layers!</Link>
             </article>
           </div>
         </div>
